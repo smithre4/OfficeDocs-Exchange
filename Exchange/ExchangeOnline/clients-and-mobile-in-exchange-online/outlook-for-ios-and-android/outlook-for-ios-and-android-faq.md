@@ -173,7 +173,7 @@ For more information, see [Securing Outlook for iOS and Android in Exchange Onli
   
 ### Q: Will Outlook for iOS and Android support third-party EMM or MDM solutions?
 
-Outlook for iOS and Android supports Intune for device and applications management. Third-party MDM providers can deploy the Outlook app the same way they would deploy any iOS or Android app, using their existing tools. They can also apply device management controls like device PIN, device encryption, wipe, and more, all of which are important for a secure email experience, but all of which are also completely independent of Outlook for iOS and Android. In order to manage the app itself (such as restricting actions with corporate data like cut, copy, paste, and "save as"), customers will need to use Microsoft Intune. For detailed technical information, please see Intune's [conditional access](https://docs.microsoft.com/en-us/intune-classic/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune) and [MAM](https://docs.microsoft.com/en-us/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) documentation. 
+Outlook for iOS and Android supports Intune for device and application management. Third-party MDM providers can deploy the Outlook app the same way they would deploy any iOS or Android app, using their existing tools. They can also apply device management controls like device PIN, device encryption, wipe, and more, all of which are important for a secure email experience, but all of which are also completely independent of Outlook for iOS and Android. In order to manage the app itself (such as restricting actions with corporate data like cut, copy, paste, and "save as"), customers will need to use Microsoft Intune. For detailed technical information, please see Azure Active Directory's [conditional access](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) and Intune's [App Protection Policies](https://docs.microsoft.com/en-us/intune/app-protection-policy) documentation. 
   
 ### Q: Is a license required to use Outlook for iOS and Android?
 
@@ -183,9 +183,9 @@ Outlook for iOS and Android is free for consumer usage from the iOS App store an
 
 The following questions concern end-users in your organization who are using Outlook for iOS and Android on their devices to access their Exchange mailboxes.
   
-### Q: My users enabled the "Save Contacts to Device" advanced settings option. However, they are complaining that not all contacts have synchronized on their iOS devices. Are there limitations with synchronization?
+### Q: My users enabled the "Save Contacts" advanced settings option. However, they are complaining that not all contacts have been exported to the native contacts app on their iOS devices. Are there limitations with synchronization?
 
-Due to limitations in iOS, contacts only synchronize with the native app when Outlook is in the foreground and is restricted to synchronize only one hundred contacts at a time. iOS also controls when contact synchronization occurs.
+DDue to limitations in iOS, the initial export of contacts can only begin when Outlook is in the foreground. A user can switch between apps and the export will continue while Outlook is active in memory. There are limitations when syncing with iCloud that may result in data inconsistency, but Outlook will automatically trigger a reconciliation to ensure that the contacts are always consistently exported (e.g., reconciliation will remove duplicates in the event that Outlook detects exported contacts from a previous export activity). In the event, you are seeing an inconsistency and it has not been resolved after a short period of time, wait twenty-four hours and then restart the app to trigger the reconciliation process.
   
 ### Q: Why are the Office mobile apps required to be installed on Android in order to render attachments in Outlook, while iOS devices provide a preview of the attachments within Outlook?
 
@@ -200,14 +200,10 @@ Outlook (like other mobile clients) does not download attachments automatically.
 Outlook for iOS stores attachments in our own database. As a result, every attachment we download to the client takes up a considerable amount of space in our database. To ensure the client is able to provide fast performance and take a small amount of space, we purge data rather aggressively based on usage (attachments will be cached up to seven days).
   
 Unlike iOS, Android uses an accessible file system, so when Outlook for Android downloads an attachment, it doesn't go into the database, rather it is stored as a temporary file.
-  
-### Q: Several meetings on my calendar have attachments that I can access in Outlook for Windows and Mac and from Outlook on the web, but I can't locate these attachments on my appointments for Outlook for iOS and Android. Why is that?
 
-Outlook for iOS and Android currently does not support accessing attachments on calendar appointments, but we are planning to support this in a future update.
-  
-### Q: Why does data within Outlook for iOS and Android disappear and then re-appear after I toggle the Focused Inbox or the Organize by Thread settings?
+### Q: Why does data within Outlook for iOS disappear and then re-appear after I toggle the Focused Inbox or the Organize by Thread settings?
 
-Whenever those options are changed, Outlook for iOS and Android performs a soft reset. This wipes the existing data that has been downloaded to the app and requires a re-synchronization.
+Whenever those options are changed, Outlook for iOS performs a soft reset. This wipes the existing data that has been downloaded to the app and requires a re-synchronization.
   
 ### Q: Can I view organization chart information in Outlook for iOS?
 
