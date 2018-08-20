@@ -122,15 +122,7 @@ The hybrid Modern Authentication architecture has the following technical requir
     
 4. **Intune setup**: Both cloud-only and hybrid deployments of Intune are supported (MDM for Office 365 is not supported).
     
-5. **Office 365 licensing**: Each user must have one of the following Office 365 licenses:
-    
-  - Commercial: Enterprise E3, Enterprise E5, ProPlus, or Business licenses
-    
-  - Government: U.S. Government Community G3, U.S. Government Community G5
-    
-  - Education: Office 365 Education E3, Office 365 Education E5
-    
-    In addition, the licenses must include the Office client applications that are required for Outlook for iOS and Android commercial use.
+5. **Office 365 licensing**: Outlook for iOS and Android requires an Office 365 subscription that includes the Office desktop applications: Business, Business Premium, Enterprise E3, E5, and ProPlus, or the corresponding versions of those plans for Government or Education. Commercial users with the following subscriptions are allowed to use the Outlook mobile app on devices with integrated screens 10.1” diagonally or less: Office 365 Enterprise E1, Office 365 F1, Office 365 Business Essentials, Office 365 A1, and if you only have an Exchange Online license (without Office). If you only have an Exchange on-premises (Exchange Server) license, you are not licensed to use the app.
     
 6. **EMS licensing**: Each on-premises user must have one of the following licenses:
     
