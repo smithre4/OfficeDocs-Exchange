@@ -44,7 +44,7 @@ Data synchronization between the Exchange on-premises environment and Exchange O
 
 Processing information in the Microsoft Cloud enables advanced features and capabilities, such as the categorization of email for the Focused Inbox, customized experience for travel and calendar, and improved search speed. Relying on the cloud for intensive processing and minimizing the resources required from users' devices enhances the app's performance and stability. Lastly, it allows Outlook to build features that work across all email accounts, regardless of the technological capabilities of the underlying servers (such as different versions of Exchange Server or Office 365).
 
->![!IMPORTANT]
+>[!IMPORTANT]
 > On-premises mailboxes using basic authentication with Outlook for iOS and Android do not support Enterprise Mobility + Security features such as Azure Active Directory conditional access and Intune app protection policies. For support with these technologies, see [Using hybrid Modern Authentication with Outlook for iOS and Android](use-hybrid-modern-auth.md).
 
 ## Data security, access, and auditing controls
